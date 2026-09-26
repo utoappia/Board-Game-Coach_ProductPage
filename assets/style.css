@@ -1,0 +1,114 @@
+/* Board Game Coach — product site. Colours follow the apps (teal accent, warm neutrals). */
+:root {
+  --bg: #f4f5f7;
+  --card: #ffffff;
+  --text: #16202a;
+  --dim: #5b6775;
+  --border: #e1e5ea;
+  --accent: #0f766e;
+  --accent-soft: #e0efed;
+  --soon: #b45309;
+  --soon-soft: #fdf1e3;
+  --shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 4px 16px rgba(16, 24, 40, 0.05);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101418;
+    --card: #1a2027;
+    --text: #e8edf2;
+    --dim: #9aa6b2;
+    --border: #2a323b;
+    --accent: #2dd4bf;
+    --accent-soft: #123a36;
+    --soon: #fbbf77;
+    --soon-soft: #3a2a17;
+    --shadow: none;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "PingFang TC", "PingFang SC", "Hiragino Sans", "Apple SD Gothic Neo", "Noto Sans CJK", sans-serif;
+}
+a { color: var(--accent); }
+img { max-width: 100%; }
+
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+
+/* Header */
+.site-header { border-bottom: 1px solid var(--border); background: var(--card); }
+.site-header .wrap { display: flex; align-items: center; gap: 12px; min-height: 60px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 700; font-size: 18px; }
+.brand img { width: 36px; height: 36px; object-fit: contain; }
+.nav { display: flex; gap: 16px; margin-left: auto; align-items: center; flex-wrap: wrap; }
+.nav a { color: var(--dim); text-decoration: none; font-size: 15px; }
+.nav a:hover, .nav a[aria-current="page"] { color: var(--accent); }
+.lang { font: inherit; font-size: 14px; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 4px 8px; }
+
+/* Hero */
+.hero { text-align: center; padding: 48px 0 24px; }
+.hero img { width: 112px; height: 112px; object-fit: contain; }
+.hero h1 { font-size: clamp(30px, 6vw, 44px); line-height: 1.15; margin: 12px 0 8px; }
+.hero p { color: var(--dim); font-size: 18px; max-width: 620px; margin: 0 auto; }
+
+/* Game grid */
+.section-title { font-size: 22px; margin: 32px 0 12px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+.game-card {
+  display: flex; gap: 14px; align-items: center; padding: 16px;
+  background: var(--card); border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow);
+  color: var(--text); text-decoration: none; transition: transform 0.12s ease;
+}
+.game-card:hover { transform: translateY(-2px); }
+.game-card h3 { margin: 0 0 2px; font-size: 18px; }
+.game-card p { margin: 0; color: var(--dim); font-size: 14px; line-height: 1.45; }
+.icon { width: 64px; height: 64px; border-radius: 14px; flex: none; object-fit: cover; }
+.icon.big { width: 112px; height: 112px; border-radius: 24px; }
+.tile { display: grid; place-items: center; font-weight: 700; font-size: 34px; }
+.tile.big { font-size: 60px; }
+.tile.shogi { background: linear-gradient(145deg, #e9c27a, #c9973f); color: #2b1b0a; font-family: "Hiragino Mincho ProN", "Yu Mincho", serif; }
+.tile.chinese-chess { background: radial-gradient(circle at 50% 45%, #fbf3e2 0 58%, #c9973f 60% 100%); color: #b91c1c; font-family: "PingFang TC", "Noto Serif TC", serif; }
+.badge { display: inline-block; font-size: 12px; font-weight: 600; border-radius: 999px; padding: 2px 10px; margin-top: 6px; }
+.badge.soon { color: var(--soon); background: var(--soon-soft); }
+.badge.live { color: var(--accent); background: var(--accent-soft); }
+
+/* Cards / prose */
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 24px; box-shadow: var(--shadow); margin: 16px 0; }
+.card h2 { margin-top: 0; font-size: 22px; }
+.prose h2 { font-size: 20px; margin: 28px 0 8px; }
+.prose h2:first-child { margin-top: 0; }
+.prose p, .prose li { color: var(--text); }
+.prose .meta { color: var(--dim); font-size: 14px; }
+.bullets { padding-left: 20px; margin: 8px 0 0; }
+.bullets li { margin: 4px 0; }
+
+/* Game page */
+.game-hero { display: flex; gap: 20px; align-items: center; padding: 40px 0 8px; flex-wrap: wrap; }
+.game-hero h1 { margin: 0; font-size: clamp(28px, 5vw, 40px); line-height: 1.2; }
+.game-hero p { margin: 6px 0 0; color: var(--dim); font-size: 17px; }
+.stores { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+.store-btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 12px;
+  background: var(--text); color: var(--bg); text-decoration: none; font-weight: 600; font-size: 15px;
+}
+.store-btn svg { width: 20px; height: 20px; fill: currentColor; }
+.soon-note { margin-top: 16px; color: var(--soon); font-weight: 600; }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--border); margin-top: 48px; padding: 24px 0 40px; color: var(--dim); font-size: 14px; }
+.site-footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+.site-footer nav { display: flex; gap: 16px; flex-wrap: wrap; margin-left: auto; }
+.site-footer a { color: var(--dim); }
+
+@media (max-width: 560px) {
+  .nav { gap: 12px; width: 100%; margin-left: 0; padding-bottom: 10px; }
+  .hero { padding-top: 32px; }
+  .card { padding: 18px; }
+}
