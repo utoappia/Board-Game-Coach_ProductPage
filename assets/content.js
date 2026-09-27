@@ -158,7 +158,7 @@ window.SITE = {
    "playStore": "https://play.google.com/store/apps/details?id=com.utoappia.gogame"
   },
   {
-   "id": "connect4",
+   "id": "four-in-a-row",
    "name": {
     "en": "Four in a Row",
     "zh-Hans": "四子棋",

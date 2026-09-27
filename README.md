@@ -6,7 +6,7 @@ step: plain HTML, CSS and JavaScript.
 | Page | Path |
 | --- | --- |
 | All games | `/` |
-| One game | `/<game-id>/` (go, connect4, chess, gomoku, shogi, chinese-chess, nine-mens-morris, dots-and-boxes, mancala) |
+| One game | `/<game-id>/` (go, four-in-a-row, chess, gomoku, shogi, chinese-chess, nine-mens-morris, dots-and-boxes, mancala) |
 | Privacy policy (all apps) | `/privacy/` |
 | Support (all apps) | `/support/` |
 
