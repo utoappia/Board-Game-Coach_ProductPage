@@ -106,7 +106,9 @@
   function gameCard(game) {
     var badge = game.appStore || game.playStore
       ? '<span class="badge live">' + esc(ui('available')) + '</span>'
-      : '<span class="badge soon">' + esc(ui('comingSoon')) + '</span>';
+      : game.status === 'planned'
+        ? '<span class="badge planned">' + esc(ui('planned')) + '</span>'
+        : '<span class="badge soon">' + esc(ui('comingSoon')) + '</span>';
     return '<a class="game-card" href="' + href(game.id + '/') + '">' + icon(game, false) +
       '<div><h3>' + esc(tr(game.name)) + '</h3><p>' + esc(tr(game.tagline)) + '</p>' + badge + '</div></a>';
   }
@@ -136,7 +138,7 @@
         (g.playStore ? '<a class="store-btn" href="' + g.playStore + '" rel="noopener">' + PLAY + esc(ui('googlePlay')) + '</a>' : '') +
         '</div>';
     } else {
-      stores = '<p class="soon-note">' + esc(ui('comingSoonLong')) + '</p>';
+      stores = '<p class="soon-note">' + esc(ui(g.status === 'planned' ? 'plannedLong' : 'comingSoonLong')) + '</p>';
     }
     return '<main class="wrap">' +
       '<section class="game-hero">' + icon(g, true) +

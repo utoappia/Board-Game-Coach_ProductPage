@@ -6,7 +6,7 @@ step: plain HTML, CSS and JavaScript.
 | Page | Path |
 | --- | --- |
 | All games | `/` |
-| One game | `/<game-id>/` (go, four-in-a-row, reversi, chess, gomoku, shogi, chinese-chess, nine-mens-morris, dots-and-boxes, mancala) |
+| One game | `/<game-id>/` (go, four-in-a-row, reversi, chess, gomoku, shogi, chinese-chess, nine-mens-morris, dots-and-boxes, mancala; planned: checkers, international-draughts, janggi, backgammon) |
 | Privacy policy (all apps) | `/privacy/` |
 | Support (all apps) | `/support/` |
 
@@ -22,7 +22,8 @@ header sets it.
 
 - **Texts and games:** `assets/content.js` (`window.SITE`). Every text has all
   five languages. A game with `appStore` / `playStore` links shows the store
-  buttons and "Available now"; without them it is "Coming soon".
+  buttons and "Available now"; without them it is "Coming soon", or "Planned"
+  with `"status": "planned"`.
 - **Rendering:** `assets/app.js` fills each page shell (`<body data-page="…">`).
 - **Look:** `assets/style.css` (light and dark, follows the device).
 - **A new game page:** copy `go/index.html` to `<id>/index.html`, change

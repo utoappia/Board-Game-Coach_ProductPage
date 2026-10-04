@@ -128,6 +128,20 @@ window.SITE = {
    "zh-Hant": "最後更新：",
    "ja": "最終更新日：",
    "ko": "최종 업데이트:"
+  },
+  "planned": {
+   "en": "Planned",
+   "zh-Hans": "规划中",
+   "zh-Hant": "規劃中",
+   "ja": "開発予定",
+   "ko": "출시 계획"
+  },
+  "plannedLong": {
+   "en": "Planned: we're building this one. It will come to the App Store and Google Play later.",
+   "zh-Hans": "规划中：我们正在开发这款游戏，之后会登陆 App Store 和 Google Play。",
+   "zh-Hant": "規劃中：我們正在開發這款遊戲，之後會登上 App Store 和 Google Play。",
+   "ja": "開発予定：現在制作中です。のちほど App Store と Google Play で公開します。",
+   "ko": "출시 계획: 지금 만들고 있는 게임으로, 나중에 App Store와 Google Play에 출시됩니다."
   }
  },
  "games": [
@@ -373,6 +387,106 @@ window.SITE = {
     "zh-Hant": "播棋是一類「播種」遊戲的統稱，數百年來在非洲、中東和亞洲廣為流傳，是世界上最古老的棋盤遊戲之一。如今大多數人熟悉的是卡拉哈（Kalah）這種玩法。玩家從坑裡抓起種子，沿著棋盤逐一播下，爭取額外的回合，並吃掉種子。人們喜歡它，是因為它節奏平和、動手感強，簡單到孩子也能玩；而對於願意深入琢磨的人，其中處處是計數和謀劃的樂趣。",
     "ja": "マンカラは、アフリカや中東、アジアで何百年にもわたって遊ばれてきた「種まき」ゲームの総称で、世界で最も古いボードゲームの一つです。今いちばんよく知られているのはカラハと呼ばれるルールです。穴から種をすくい上げて盤のまわりに一つずつまいていき、もう一手続けて打つ権利を得たり、種を取ったりします。落ち着いて手を動かしながら遊べて、子どもにもわかるほどシンプルなのに、深く考える人には数を数えて先を読む楽しさがたっぷり。それがマンカラの魅力です。",
     "ko": "만칼라는 아프리카와 중동, 아시아에서 수백 년 동안 즐겨 온 '씨 뿌리기' 게임을 통틀어 이르는 말로, 세계에서 가장 오래된 보드게임 중 하나입니다. 오늘날 가장 많이 알려진 방식은 칼라(Kalah)입니다. 구멍에서 씨앗을 집어 판을 따라 하나씩 뿌려 나가며, 한 번 더 둘 기회를 얻거나 씨앗을 잡습니다. 차분하게 손으로 즐길 수 있고 아이들도 할 만큼 쉬우면서, 깊이 파고드는 사람에게는 수를 세고 계획하는 재미가 가득하다는 점이 만칼라의 매력입니다."
+   }
+  },
+  {
+   "id": "checkers",
+   "status": "planned",
+   "name": {
+    "en": "Checkers",
+    "zh-Hans": "跳棋（美式）",
+    "zh-Hant": "跳棋（美式）",
+    "ja": "チェッカー",
+    "ko": "체커"
+   },
+   "tagline": {
+    "en": "Classic 8×8 checkers with a coach and perfect endgames.",
+    "zh-Hans": "经典 8×8 美式跳棋，有教练指导和完美残局。",
+    "zh-Hant": "經典 8×8 美式跳棋，有教練指導和完美殘局。",
+    "ja": "コーチと完璧な終盤データ付きの、定番8×8チェッカー。",
+    "ko": "코치와 완벽한 끝내기를 갖춘 클래식 8×8 체커."
+   },
+   "about": {
+    "en": "Checkers, also called English draughts, is played on the dark squares of an 8×8 board. Pieces move diagonally forward, capture by jumping, and must capture whenever they can — and a piece that reaches the far side becomes a king. Its simple rules hide remarkably deep play: the game was finally solved by computer in 2007, and it is still enjoyed everywhere from kitchen tables to world championships.",
+    "zh-Hans": "美式跳棋（又称英式国际跳棋）在 8×8 棋盘的深色格上进行。棋子沿斜线向前走、跳过对方棋子来吃子，而且能吃时必须吃；走到对面底线的棋子会升为王。简单的规则下藏着惊人的深度：这个游戏直到 2007 年才被计算机完全破解，至今仍在家中餐桌和世界锦标赛上广受喜爱。",
+    "zh-Hant": "美式跳棋（又稱英式國際跳棋）在 8×8 棋盤的深色格上進行。棋子沿斜線向前走、跳過對方棋子來吃子，而且能吃時必須吃；走到對面底線的棋子會升為王。簡單的規則下藏著驚人的深度：這個遊戲直到 2007 年才被電腦完全破解，至今仍在家中餐桌和世界錦標賽上廣受喜愛。",
+    "ja": "チェッカー（イングリッシュ・ドラフツ）は8×8の盤の黒いマスで遊びます。駒は斜め前に進み、相手の駒を跳び越えて取ります。取れるときは必ず取らなければならず、相手の端まで進んだ駒はキングになります。ルールは簡単ですが奥はとても深く、2007年になってようやくコンピュータで完全解析されました。今も家庭の食卓から世界選手権まで、世界中で親しまれています。",
+    "ko": "체커(잉글리시 드래프츠)는 8×8 판의 어두운 칸에서 두는 게임입니다. 말은 대각선 앞으로 움직이고, 상대 말을 뛰어넘어 잡으며, 잡을 수 있으면 반드시 잡아야 합니다. 상대편 끝줄에 도착한 말은 킹이 됩니다. 규칙은 단순하지만 놀라울 만큼 깊어서 2007년에야 컴퓨터로 완전히 풀렸고, 지금도 집 식탁부터 세계 선수권까지 어디서나 사랑받고 있습니다."
+   }
+  },
+  {
+   "id": "international-draughts",
+   "status": "planned",
+   "name": {
+    "en": "International Draughts",
+    "zh-Hans": "国际跳棋",
+    "zh-Hant": "國際跳棋",
+    "ja": "国際ドラフツ",
+    "ko": "국제 드래프츠"
+   },
+   "tagline": {
+    "en": "10×10 draughts with flying kings, taught by an AI coach.",
+    "zh-Hans": "10×10 国际跳棋，王可长距离飞行，AI 教练指导。",
+    "zh-Hant": "10×10 國際跳棋，王可長距離飛行，AI 教練指導。",
+    "ja": "飛ぶキングのある10×10ドラフツを、AIコーチと学べます。",
+    "ko": "멀리 나는 킹이 있는 10×10 드래프츠를 AI 코치와 배워 보세요."
+   },
+   "about": {
+    "en": "International draughts is played on a 10×10 board with twenty pieces each, mainly in the Netherlands, France, Russia, Africa and beyond. Men capture backwards as well as forwards, you must take the most pieces available, and kings fly any distance along a diagonal. Long combinations and sacrifices make it one of the richest strategy games, with a strong club and tournament culture.",
+    "zh-Hans": "国际跳棋在 10×10 的棋盘上进行，每方二十枚棋子，在荷兰、法国、俄罗斯、非洲等地广为流行。普通棋子可以前后吃子，而且必须吃掉最多的棋子；王可以沿斜线长距离飞行。长串的连吃和弃子让它成为最丰富的策略游戏之一，也有深厚的俱乐部和比赛文化。",
+    "zh-Hant": "國際跳棋在 10×10 的棋盤上進行，每方二十枚棋子，在荷蘭、法國、俄羅斯、非洲等地廣為流行。一般棋子可以前後吃子，而且必須吃掉最多的棋子；王可以沿斜線長距離飛行。長串的連吃和棄子讓它成為最豐富的策略遊戲之一，也有深厚的俱樂部和比賽文化。",
+    "ja": "国際ドラフツは10×10の盤でそれぞれ20個の駒を使って遊ぶゲームで、オランダ、フランス、ロシア、アフリカなどで盛んです。普通の駒は前にも後ろにも取ることができ、取れるだけ多く取らなければなりません。キングは斜めにどこまでも飛べます。長い連続取りや捨て駒が魅力の奥深い戦略ゲームで、クラブや大会の文化も根づいています。",
+    "ko": "국제 드래프츠는 10×10 판에서 각자 20개의 말로 두는 게임으로, 네덜란드, 프랑스, 러시아, 아프리카 등에서 널리 즐깁니다. 일반 말도 앞뒤로 잡을 수 있고, 가장 많이 잡는 수를 반드시 둬야 하며, 킹은 대각선으로 멀리 날아갑니다. 긴 연속 잡기와 희생이 어우러진 가장 풍부한 전략 게임 중 하나로, 클럽과 대회 문화도 탄탄합니다."
+   }
+  },
+  {
+   "id": "janggi",
+   "status": "planned",
+   "name": {
+    "en": "Janggi",
+    "zh-Hans": "韩国象棋",
+    "zh-Hant": "韓國象棋",
+    "ja": "チャンギ",
+    "ko": "장기"
+   },
+   "tagline": {
+    "en": "Korean chess, from palace moves to cannon tactics.",
+    "zh-Hans": "韩国象棋，从九宫走法到包的战术。",
+    "zh-Hant": "韓國象棋，從九宮走法到包的戰術。",
+    "ja": "宮の動きから包の戦術まで、韓国将棋を学べます。",
+    "ko": "궁성 수부터 포 전술까지, 장기를 배워 보세요."
+   },
+   "about": {
+    "en": "Janggi is Korea's traditional chess, a close cousin of Chinese chess played on a 9×10 grid with no river. The generals stay in their palace, cannons jump over exactly one piece, and each side chooses how to set up its horses and elephants before the game. Players can even pass a turn. It is a game of patient manoeuvring and sharp tactics, loved across Korea for generations.",
+    "zh-Hans": "韩国象棋（장기）是韩国的传统象棋，与中国象棋是近亲，在没有河界的 9×10 棋盘上进行。将只能留在九宫中，包必须恰好隔一子才能跳，开局前双方还能自行选择马和象的摆法，甚至可以跳过一手。它讲究耐心的调度和凌厉的战术，在韩国世代相传、深受喜爱。",
+    "zh-Hant": "韓國象棋（장기）是韓國的傳統象棋，與中國象棋是近親，在沒有河界的 9×10 棋盤上進行。將只能留在九宮中，包必須恰好隔一子才能跳，開局前雙方還能自行選擇馬和象的擺法，甚至可以跳過一手。它講究耐心的調度和凌厲的戰術，在韓國世代相傳、深受喜愛。",
+    "ja": "チャンギは韓国の伝統的な将棋で、シャンチー（中国象棋）の近い親戚です。川のない9×10の盤で遊び、将は宮の中にとどまり、包はちょうど1つの駒を跳び越えて動きます。対局前には馬と象の配置をそれぞれ選べ、手番をパスすることもできます。粘り強い駒運びと鋭い戦術のゲームとして、韓国で何世代にもわたって愛されています。",
+    "ko": "장기는 한국의 전통 장기로, 강이 없는 9×10 판에서 두는 중국 장기의 가까운 친척입니다. 궁은 궁성 안에 머물고, 포는 정확히 말 하나를 넘어 움직이며, 대국 전에 마와 상의 배치를 각자 고를 수 있습니다. 차례를 넘길 수도 있지요. 끈기 있는 운영과 날카로운 전술의 게임으로, 한국에서 대대로 사랑받아 왔습니다."
+   }
+  },
+  {
+   "id": "backgammon",
+   "status": "planned",
+   "name": {
+    "en": "Backgammon",
+    "zh-Hans": "西洋双陆棋",
+    "zh-Hant": "西洋雙陸棋",
+    "ja": "バックギャモン",
+    "ko": "백개먼"
+   },
+   "tagline": {
+    "en": "Learn backgammon's checker play and the doubling cube.",
+    "zh-Hans": "学习西洋双陆棋的走子和加倍骰。",
+    "zh-Hant": "學習西洋雙陸棋的走子和加倍骰。",
+    "ja": "バックギャモンの駒の動かし方とダブリングキューブを学べます。",
+    "ko": "백개먼의 말 운용과 더블링 큐브를 배워 보세요."
+   },
+   "about": {
+    "en": "Backgammon is one of the oldest board games in the world. Two players race their fifteen checkers around the board by the roll of two dice, hitting lone checkers, building blocking points and finally bearing off. Luck decides single rolls, but skill decides matches: knowing the odds, when to take risks and when to double the stakes with the doubling cube is what separates strong players.",
+    "zh-Hans": "西洋双陆棋是世界上最古老的棋盘游戏之一。双方根据两颗骰子的点数，让各自十五枚棋子绕棋盘竞走，打掉落单的棋子、筑起封锁点，最后把棋子全部移出。单次掷骰靠运气，整场比赛却靠实力：懂得概率、知道何时冒险、何时用加倍骰提高赌注，正是高手与一般玩家的区别。",
+    "zh-Hant": "西洋雙陸棋是世界上最古老的棋盤遊戲之一。雙方根據兩顆骰子的點數，讓各自十五枚棋子繞棋盤競走，打掉落單的棋子、築起封鎖點，最後把棋子全部移出。單次擲骰靠運氣，整場比賽卻靠實力：懂得機率、知道何時冒險、何時用加倍骰提高賭注，正是高手與一般玩家的區別。",
+    "ja": "バックギャモンは世界最古のボードゲームのひとつです。2人が2つのサイコロの目に従って15個の駒を盤上で競走させ、ひとつだけの駒をヒットし、ブロックするポイントを作り、最後にベアオフします。1回のサイコロは運ですが、勝負を決めるのは実力です。確率を知り、いつリスクを取り、いつダブリングキューブで賭け金を上げるかが上級者を分けます。",
+    "ko": "백개먼은 세계에서 가장 오래된 보드게임 중 하나입니다. 두 사람이 주사위 두 개의 눈에 따라 각자 15개의 말을 판 위에서 경주시키며, 혼자 있는 말을 잡고, 길을 막는 포인트를 쌓고, 마지막에 말을 모두 내보냅니다. 한 번의 주사위는 운이지만 승부는 실력이 가릅니다. 확률을 알고, 언제 위험을 감수하고 언제 더블링 큐브로 판돈을 올릴지 아는 것이 고수를 만듭니다."
    }
   }
  ],
