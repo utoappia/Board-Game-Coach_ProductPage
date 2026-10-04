@@ -6,7 +6,7 @@ step: plain HTML, CSS and JavaScript.
 | Page | Path |
 | --- | --- |
 | All games | `/` |
-| One game | `/<game-id>/` (go, four-in-a-row, chess, gomoku, shogi, chinese-chess, nine-mens-morris, dots-and-boxes, mancala) |
+| One game | `/<game-id>/` (go, four-in-a-row, reversi, chess, gomoku, shogi, chinese-chess, nine-mens-morris, dots-and-boxes, mancala) |
 | Privacy policy (all apps) | `/privacy/` |
 | Support (all apps) | `/support/` |
 
@@ -31,7 +31,6 @@ header sets it.
 - **Privacy policy changes:** edit `SITE.privacy` in all five languages and
   update `SITE.privacy.updated`.
 
-Reversi is not listed for now.
 
 Preview locally: `python3 -m http.server` in this folder, then open
 http://localhost:8000.

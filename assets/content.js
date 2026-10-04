@@ -182,6 +182,32 @@ window.SITE = {
    }
   },
   {
+   "id": "reversi",
+   "name": {
+    "en": "Reversi",
+    "zh-Hans": "黑白棋",
+    "zh-Hant": "黑白棋",
+    "ja": "リバーシ",
+    "ko": "리버시"
+   },
+   "tagline": {
+    "en": "Learn Reversi from the first corner to the endgame, with an AI coach.",
+    "zh-Hans": "从第一个角到残局，跟 AI 教练学黑白棋。",
+    "zh-Hant": "從第一個角到殘局，跟 AI 教練學黑白棋。",
+    "ja": "最初の隅から終盤まで、AIコーチとリバーシを学べます。",
+    "ko": "첫 모서리부터 끝내기까지, AI 코치와 리버시를 배워 보세요."
+   },
+   "about": {
+    "en": "Reversi is played on an 8×8 board with discs that are black on one side and white on the other. Each move must trap a line of your opponent's discs between two of yours, and every trapped disc flips to your colour, so the board can change completely in a few moves. The rules fit in a minute, yet the game rewards planning: counting mobility, avoiding the squares next to the corners, and taking the corners that can never be flipped back. That mix of simple rules and sudden reversals is why players around the world, from beginners to world championship contenders, keep coming back to it.",
+    "zh-Hans": "黑白棋在 8×8 的棋盘上进行，棋子一面黑、一面白。每一步都必须把对手的一排棋子夹在你的两枚棋子之间，被夹住的棋子全部翻成你的颜色，所以几步之间局面就可能完全逆转。规则一分钟就能学会，但这个游戏讲究计划：计算行动力、避开紧邻角落的格子、抢占永远不会被翻回去的角。简单的规则加上瞬间的逆转，正是世界各地的玩家——从初学者到世界锦标赛选手——一再回来下黑白棋的原因。",
+    "zh-Hant": "黑白棋在 8×8 的棋盤上進行，棋子一面黑、一面白。每一步都必須把對手的一排棋子夾在你的兩枚棋子之間，被夾住的棋子全部翻成你的顏色，所以幾步之間局面就可能完全逆轉。規則一分鐘就能學會，但這個遊戲講究計畫：計算行動力、避開緊鄰角落的格子、搶佔永遠不會被翻回去的角。簡單的規則加上瞬間的逆轉，正是世界各地的玩家——從初學者到世界錦標賽選手——一再回來下黑白棋的原因。",
+    "ja": "リバーシは8×8の盤で、片面が黒、もう片面が白の石を使って遊びます。相手の石の列を自分の石ではさむように打ち、はさまれた石はすべて自分の色に返るので、数手で盤面ががらりと変わることもあります。ルールは1分で覚えられますが、勝つには計画が欠かせません。打てる場所の数を数え、隅のとなりのマスを避け、二度と返されない隅を取る。シンプルなルールと一瞬の大逆転があるからこそ、初心者から世界選手権の挑戦者まで、世界中の人がこのゲームに夢中になります。",
+    "ko": "리버시는 한쪽은 검은색, 다른 쪽은 흰색인 돌로 8×8 판에서 두는 게임입니다. 상대 돌의 줄을 내 돌 두 개 사이에 가두어야 하고, 갇힌 돌은 모두 내 색으로 뒤집히기 때문에 몇 수 만에 판이 완전히 바뀌기도 합니다. 규칙은 1분이면 익힐 수 있지만, 이기려면 계획이 필요합니다. 둘 수 있는 자리의 수를 세고, 모서리 옆 칸을 피하고, 다시는 뒤집히지 않는 모서리를 차지해야 하죠. 단순한 규칙과 순식간의 역전이 있기에 초보자부터 세계 선수권 도전자까지 전 세계의 많은 사람이 리버시를 즐깁니다."
+   },
+   "appStore": "https://apps.apple.com/app/reversi-coach/id6805278949",
+   "playStore": "https://play.google.com/store/apps/details?id=reversi.utoappia.com"
+  },
+  {
    "id": "chess",
    "name": {
     "en": "Chess",
