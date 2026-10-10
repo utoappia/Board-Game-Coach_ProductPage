@@ -193,7 +193,9 @@ window.SITE = {
     "en": "Four in a Row is one of the most familiar games in the world. Families play it at the kitchen table, friends play it in cafés and classrooms, and it is often the first strategy game a child learns. People love it because a game takes only a few minutes and anyone can learn the rules in seconds, yet every move matters: the simple board hides strategies and plans that reward thinking ahead.",
     "ja": "四目並べは、世界で最もなじみ深いゲームの一つです。家族で食卓を囲んで、友だちとカフェや教室で遊ばれ、子どもが初めて覚える戦略ゲームになることもよくあります。愛される理由は、一局がほんの数分で、ルールも数秒で覚えられるのに、どの一手にも意味があること。シンプルな盤には、先を読む人ほど報われる戦略と作戦が隠れています。",
     "ko": "사목은 세계에서 가장 친숙한 게임 중 하나입니다. 가족들은 식탁에 둘러앉아, 친구들은 카페나 교실에서 즐기고, 아이가 처음 배우는 전략 게임이 되는 경우도 많습니다. 한 판에 몇 분이면 충분하고 규칙은 몇 초 만에 배울 수 있지만, 모든 수가 중요하다는 것이 사랑받는 이유입니다. 단순해 보이는 판 속에는 앞을 내다보는 사람에게 보답하는 전략과 계획이 숨어 있습니다."
-   }
+   },
+   "appStore": "https://apps.apple.com/app/four-in-a-row-coach/id6815380260",
+   "playStore": "https://play.google.com/store/apps/details?id=com.utoappia.fourinarow"
   },
   {
    "id": "reversi",
