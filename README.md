@@ -22,8 +22,8 @@ header sets it.
 
 - **Texts and games:** `assets/content.js` (`window.SITE`). Every text has all
   five languages. A game with `appStore` / `playStore` links shows the store
-  buttons and "Available now" (only `playStore`: "Available on Google Play"
-  and an App Store "coming soon" note); without them it is "Coming soon", or "Planned"
+  buttons and "Available now" with an Apple / Android icon per store (only
+  `playStore`: also an App Store "coming soon" note); without them it is "Coming soon", or "Planned"
   with `"status": "planned"`.
 - **Rendering:** `assets/app.js` fills each page shell (`<body data-page="…">`).
 - **Look:** `assets/style.css` (light and dark, follows the device).

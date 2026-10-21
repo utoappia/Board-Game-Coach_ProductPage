@@ -74,6 +74,8 @@
   var APPLE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.71-3.19-1.73-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.74 2.2 1.1-.04 1.52-.71 2.85-.71s1.7.71 2.87.69c1.18-.02 1.93-1.08 2.66-2.14.84-1.23 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.29-3.54zM14.18 6.11c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.65-1.05 1.68-.92 2.68.97.07 1.96-.49 2.56-1.23z"/></svg>';
   var PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.2c-.2.2-.3.6-.3 1v17.6c0 .4.1.8.3 1l9.8-9.8L3.6 2.2zm11.2 11.2 2.9 2.9-11.8 6.7 8.9-9.6zm0-2.8L5.9 1l11.8 6.7-2.9 2.9zm4.9 2.8-2.5 1.4-3.1-3.1 3.1-3.1 2.5 1.4c.7.4.7 1 0 1.4z"/></svg>';
 
+  var ANDROID = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24c-2.86-1.21-6.08-1.21-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48C3.3 11.25 1.28 14.44 1 18h22c-.28-3.56-2.3-6.75-5.4-8.52zM7 15.25c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25zm10 0c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25z"/></svg>';
+
   function header() {
     var nav = [
       ['index.html', ui('navGames'), 'home'],
@@ -104,10 +106,10 @@
   }
 
   function gameCard(game) {
-    var badge = game.appStore
-      ? '<span class="badge live">' + esc(ui('available')) + '</span>'
-      : game.playStore
-        ? '<span class="badge live">' + esc(ui('availablePlay')) + '</span>'
+    var badge = game.appStore || game.playStore
+      ? '<span class="badge live">' + esc(ui('available')) +
+        (game.appStore ? '<span class="os" title="' + esc(ui('appStore')) + '">' + APPLE + '</span>' : '') +
+        (game.playStore ? '<span class="os" title="' + esc(ui('googlePlay')) + '">' + ANDROID + '</span>' : '') + '</span>'
       : game.status === 'planned'
         ? '<span class="badge planned">' + esc(ui('planned')) + '</span>'
         : '<span class="badge soon">' + esc(ui('comingSoon')) + '</span>';

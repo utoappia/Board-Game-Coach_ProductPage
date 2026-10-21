@@ -83,6 +83,8 @@ img { max-width: 100%; }
 .badge.soon { color: var(--soon); background: var(--soon-soft); }
 .badge.planned { color: var(--planned); background: var(--planned-soft); }
 .badge.live { color: var(--accent); background: var(--accent-soft); }
+.badge .os { display: inline-block; margin-left: 6px; vertical-align: -2px; }
+.badge .os svg { width: 14px; height: 14px; fill: currentColor; display: block; }
 
 /* Cards / prose */
 .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 24px; box-shadow: var(--shadow); margin: 16px 0; }

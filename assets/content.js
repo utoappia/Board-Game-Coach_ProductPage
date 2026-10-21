@@ -73,13 +73,6 @@ window.SITE = {
    "ja": "配信中",
    "ko": "지금 이용 가능"
   },
-  "availablePlay": {
-   "en": "Available on Google Play",
-   "zh-Hans": "已在 Google Play 推出",
-   "zh-Hant": "已在 Google Play 推出",
-   "ja": "Google Play で配信中",
-   "ko": "Google Play에서 이용 가능"
-  },
   "appStoreSoon": {
    "en": "Coming soon to the App Store.",
    "zh-Hans": "即将登陆 App Store。",
