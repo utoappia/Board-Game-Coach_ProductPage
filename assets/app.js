@@ -104,8 +104,10 @@
   }
 
   function gameCard(game) {
-    var badge = game.appStore || game.playStore
+    var badge = game.appStore
       ? '<span class="badge live">' + esc(ui('available')) + '</span>'
+      : game.playStore
+        ? '<span class="badge live">' + esc(ui('availablePlay')) + '</span>'
       : game.status === 'planned'
         ? '<span class="badge planned">' + esc(ui('planned')) + '</span>'
         : '<span class="badge soon">' + esc(ui('comingSoon')) + '</span>';
@@ -137,6 +139,8 @@
         (g.appStore ? '<a class="store-btn" href="' + g.appStore + '" rel="noopener">' + APPLE + esc(ui('appStore')) + '</a>' : '') +
         (g.playStore ? '<a class="store-btn" href="' + g.playStore + '" rel="noopener">' + PLAY + esc(ui('googlePlay')) + '</a>' : '') +
         '</div>';
+      // On Google Play only so far (iOS review pending).
+      if (!g.appStore) stores += '<p class="soon-note">' + esc(ui('appStoreSoon')) + '</p>';
     } else {
       stores = '<p class="soon-note">' + esc(ui(g.status === 'planned' ? 'plannedLong' : 'comingSoonLong')) + '</p>';
     }
