@@ -6,7 +6,7 @@ step: plain HTML, CSS and JavaScript.
 | Page | Path |
 | --- | --- |
 | All games | `/` |
-| One game | `/<game-id>/` (go, four-in-a-row, reversi, chess, gomoku, shogi, chinese-chess, nine-mens-morris, dots-and-boxes, mancala; planned: checkers, international-draughts, janggi, backgammon) |
+| One game | `/<game-id>/` (go, four-in-a-row, reversi, chess, gomoku, shogi, chinese-chess, nine-mens-morris, dots-and-boxes, mancala, checkers; planned: international-draughts, janggi, backgammon) |
 | Privacy policy (all apps) | `/privacy/` |
 | Support (all apps) | `/support/` |
 
