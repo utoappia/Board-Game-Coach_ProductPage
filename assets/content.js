@@ -2,6 +2,7 @@
 window.SITE = {
  "email": "utoappia@gmail.com",
  "facebook": "https://www.facebook.com/profile.php?id=61594978761382",
+ "hubAppStore": "https://apps.apple.com/app/board-game-coach/id6837616448",
  "langNames": {
   "en": "English",
   "zh-Hans": "简体中文",
@@ -10,6 +11,34 @@ window.SITE = {
   "ko": "한국어"
  },
  "ui": {
+  "hubTitle": {
+   "en": "On iPhone and iPad: every game in one app",
+   "zh-Hans": "iPhone 和 iPad：所有游戏都在一个 App 里",
+   "zh-Hant": "iPhone 和 iPad：所有遊戲都在一個 App 裡",
+   "ja": "iPhone と iPad では、すべてのゲームがひとつのアプリに",
+   "ko": "iPhone과 iPad에서는 모든 게임을 앱 하나로"
+  },
+  "hubText": {
+   "en": "Board Game Coach on the App Store has all our games, each with its lessons, puzzles and coach.",
+   "zh-Hans": "App Store 上的「棋盘教练」收录了我们所有的游戏，每款都有课程、谜题和教练。",
+   "zh-Hant": "App Store 上的「棋盤教練」收錄了我們所有的遊戲，每款都有課程、謎題和教練。",
+   "ja": "App Store の「ボードゲームコーチ」には、すべてのゲームが入っています。どのゲームにもレッスン、パズル、コーチ付きです。",
+   "ko": "App Store의 '보드게임 코치'에 모든 게임이 들어 있습니다. 게임마다 레슨, 퍼즐, 코치가 함께합니다."
+  },
+  "hubNote": {
+   "en": "On iPhone and iPad, {name} is in the Board Game Coach app, together with all our other games.",
+   "zh-Hans": "在 iPhone 和 iPad 上，{name}收录在「棋盘教练」App 中，和我们的其他游戏在一起。",
+   "zh-Hant": "在 iPhone 和 iPad 上，{name}收錄在「棋盤教練」App 中，和我們的其他遊戲在一起。",
+   "ja": "iPhone と iPad では、{name}は「ボードゲームコーチ」アプリに、ほかのすべてのゲームと一緒に入っています。",
+   "ko": "iPhone과 iPad에서는 {name}이(가) 다른 모든 게임과 함께 '보드게임 코치' 앱에 들어 있습니다."
+  },
+  "playSoon": {
+   "en": "Coming soon to Google Play.",
+   "zh-Hans": "即将登陆 Google Play。",
+   "zh-Hant": "即將登上 Google Play。",
+   "ja": "Google Play で近日公開予定です。",
+   "ko": "Google Play에 곧 출시됩니다."
+  },
   "brand": {
    "en": "Board Game Coach",
    "zh-Hans": "Board Game Coach",

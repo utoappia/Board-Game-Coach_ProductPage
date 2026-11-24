@@ -110,11 +110,23 @@
       '</div></footer>';
   }
 
+  /**
+   * A game's App Store link: its own app if it has one, otherwise the hub app
+   * (Board Game Coach, iOS), which holds every game here unless it says "hub": false.
+   */
+  function appStoreOf(game) {
+    return game.appStore || (game.hub === false ? null : S.hubAppStore);
+  }
+  var hubBtn = function () {
+    return '<a class="store-btn" href="' + S.hubAppStore + '" rel="noopener">' + APPLE + esc(ui('appStore')) + '</a>';
+  };
+
   function gameCard(game) {
-    var badge = game.appStore || game.playStore
+    var appStore = appStoreOf(game);
+    var badge = appStore || game.playStore
       ? '<span class="badge live stores-badge" role="img" aria-label="' +
-        esc(ui('available') + ': ' + [game.appStore && ui('appStore'), game.playStore && ui('googlePlay')].filter(Boolean).join(', ')) + '">' +
-        (game.appStore ? '<span class="os" title="' + esc(ui('appStore')) + '">' + APPLE + '</span>' : '') +
+        esc(ui('available') + ': ' + [appStore && ui('appStore'), game.playStore && ui('googlePlay')].filter(Boolean).join(', ')) + '">' +
+        (appStore ? '<span class="os" title="' + esc(ui('appStore')) + '">' + APPLE + '</span>' : '') +
         (game.playStore ? '<span class="os" title="' + esc(ui('googlePlay')) + '">' + ANDROID + '</span>' : '') + '</span>'
       : game.status === 'planned'
         ? '<span class="badge planned">' + esc(ui('planned')) + '</span>'
@@ -129,6 +141,8 @@
     return '<main class="wrap">' +
       '<section class="hero"><img src="' + root + 'assets/owl.png" alt="">' +
       '<h1>' + esc(ui('heroTitle')) + '</h1><p>' + esc(ui('heroText')) + '</p></section>' +
+      '<section class="card hub"><img src="' + root + 'assets/icons/hub.png" alt="" width="72" height="72">' +
+      '<div><h2>' + esc(ui('hubTitle')) + '</h2><p>' + esc(ui('hubText')) + '</p><div class="stores">' + hubBtn() + '</div></div></section>' +
       '<h2 class="section-title">' + esc(ui('gamesTitle')) + '</h2>' +
       '<div class="grid">' + S.games.map(gameCard).join('') + '</div>' +
       '<section class="card"><h2>' + esc(ui('whyTitle')) + '</h2><ul class="bullets">' +
@@ -142,13 +156,15 @@
     if (!g) return '<main class="wrap"><p>Not found.</p></main>';
     document.title = tr(g.name) + ' — ' + ui('brand');
     var stores = '';
-    if (g.appStore || g.playStore) {
+    var appStore = appStoreOf(g);
+    if (appStore || g.playStore) {
       stores = '<div class="stores">' +
-        (g.appStore ? '<a class="store-btn" href="' + g.appStore + '" rel="noopener">' + APPLE + esc(ui('appStore')) + '</a>' : '') +
+        (appStore ? '<a class="store-btn" href="' + appStore + '" rel="noopener">' + APPLE + esc(ui('appStore')) + '</a>' : '') +
         (g.playStore ? '<a class="store-btn" href="' + g.playStore + '" rel="noopener">' + PLAY + esc(ui('googlePlay')) + '</a>' : '') +
         '</div>';
-      // On Google Play only so far (iOS review pending).
-      if (!g.appStore) stores += '<p class="soon-note">' + esc(ui('appStoreSoon')) + '</p>';
+      if (!appStore) stores += '<p class="soon-note">' + esc(ui('appStoreSoon')) + '</p>';
+      else if (!g.playStore) stores += '<p class="soon-note">' + esc(ui('playSoon')) + '</p>';
+      if (appStore === S.hubAppStore) stores += '<p class="hub-note">' + esc(ui('hubNote').replace('{name}', tr(g.name))) + '</p>';
     } else {
       stores = '<p class="soon-note">' + esc(ui(g.status === 'planned' ? 'plannedLong' : 'comingSoonLong')) + '</p>';
     }
