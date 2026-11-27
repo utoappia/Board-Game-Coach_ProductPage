@@ -123,11 +123,15 @@
 
   function gameCard(game) {
     var appStore = appStoreOf(game);
+    // one pill per store: green when the game is there, grey when it is not yet
+    var pill = function (on, svg, name, soon) {
+      var label = on ? ui('available') + ': ' + ui(name) : ui(soon);
+      return '<span class="badge os-pill ' + (on ? 'live' : 'off') + '" role="img" title="' + esc(label) +
+        '" aria-label="' + esc(label) + '">' + svg + '</span>';
+    };
     var badge = appStore || game.playStore
-      ? '<span class="badge live stores-badge" role="img" aria-label="' +
-        esc(ui('available') + ': ' + [appStore && ui('appStore'), game.playStore && ui('googlePlay')].filter(Boolean).join(', ')) + '">' +
-        (appStore ? '<span class="os" title="' + esc(ui('appStore')) + '">' + APPLE + '</span>' : '') +
-        (game.playStore ? '<span class="os" title="' + esc(ui('googlePlay')) + '">' + ANDROID + '</span>' : '') + '</span>'
+      ? '<span class="store-pills">' + pill(!!appStore, APPLE, 'appStore', 'appStoreSoon') +
+        pill(!!game.playStore, ANDROID, 'googlePlay', 'playSoon') + '</span>'
       : game.status === 'planned'
         ? '<span class="badge planned">' + esc(ui('planned')) + '</span>'
         : '<span class="badge soon">' + esc(ui('comingSoon')) + '</span>';
