@@ -166,7 +166,6 @@
         '</div>';
       if (!appStore) stores += '<p class="soon-note">' + esc(ui('appStoreSoon')) + '</p>';
       else if (!g.playStore) stores += '<p class="soon-note">' + esc(ui('playSoon')) + '</p>';
-      if (appStore === S.hubAppStore) stores += '<p class="hub-note">' + esc(ui('hubNote').replace('{name}', tr(g.name))) + '</p>';
     } else {
       stores = '<p class="soon-note">' + esc(ui(g.status === 'planned' ? 'plannedLong' : 'comingSoonLong')) + '</p>';
     }

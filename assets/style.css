@@ -116,7 +116,6 @@ img { max-width: 100%; }
 }
 .store-btn svg { width: 20px; height: 20px; fill: currentColor; }
 .soon-note { margin-top: 16px; color: var(--soon); font-weight: 600; }
-.hub-note { margin-top: 12px; color: var(--dim); font-size: 15px; }
 
 
 /* Footer */

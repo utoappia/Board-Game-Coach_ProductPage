@@ -11,13 +11,6 @@ window.SITE = {
   "ko": "한국어"
  },
  "ui": {
-  "hubNote": {
-   "en": "On iPhone and iPad, {name} is in the Board Game Coach app, together with all our other games.",
-   "zh-Hans": "在 iPhone 和 iPad 上，{name}收录在「棋盘教练」App 中，和我们的其他游戏在一起。",
-   "zh-Hant": "在 iPhone 和 iPad 上，{name}收錄在「棋盤教練」App 中，和我們的其他遊戲在一起。",
-   "ja": "iPhone と iPad では、{name}は「ボードゲームコーチ」アプリに、ほかのすべてのゲームと一緒に入っています。",
-   "ko": "iPhone과 iPad에서는 {name}이(가) 다른 모든 게임과 함께 '보드게임 코치' 앱에 들어 있습니다."
-  },
   "playSoon": {
    "en": "Coming soon to Google Play.",
    "zh-Hans": "即将登陆 Google Play。",
