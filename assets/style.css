@@ -72,7 +72,6 @@ img { max-width: 100%; }
 }
 .game-card:hover { transform: translateY(-2px); }
 .game-card h3 { margin: 0 0 2px; font-size: 18px; }
-.game-card p { margin: 0; color: var(--dim); font-size: 14px; line-height: 1.45; }
 .icon { width: 64px; height: 64px; border-radius: 14px; flex: none; object-fit: cover; }
 .icon.big { width: 112px; height: 112px; border-radius: 24px; }
 .tile { display: grid; place-items: center; font-weight: 700; font-size: 34px; }

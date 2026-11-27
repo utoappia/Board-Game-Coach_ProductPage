@@ -136,7 +136,7 @@
         ? '<span class="badge planned">' + esc(ui('planned')) + '</span>'
         : '<span class="badge soon">' + esc(ui('comingSoon')) + '</span>';
     return '<a class="game-card" href="' + href(game.id + '/') + '">' + icon(game, false) +
-      '<div><h3>' + esc(tr(game.name)) + '</h3><p>' + esc(tr(game.tagline)) + '</p>' + badge + '</div></a>';
+      '<div><h3>' + esc(tr(game.name)) + '</h3>' + badge + '</div></a>';
   }
 
   // ---- Pages ----------------------------------------------------------------
