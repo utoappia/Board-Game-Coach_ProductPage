@@ -135,8 +135,9 @@
       : game.status === 'planned'
         ? '<span class="badge planned">' + esc(ui('planned')) + '</span>'
         : '<span class="badge soon">' + esc(ui('comingSoon')) + '</span>';
-    return '<a class="game-card" href="' + href(game.id + '/') + '">' + icon(game, false) +
-      '<div><h3>' + esc(tr(game.name)) + '</h3>' + badge + '</div></a>';
+    // three rows: name, icon, store pills
+    return '<a class="game-card" href="' + href(game.id + '/') + '"><h3>' + esc(tr(game.name)) + '</h3>' +
+      icon(game, false) + badge + '</a>';
   }
 
   // ---- Pages ----------------------------------------------------------------

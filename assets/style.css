@@ -64,14 +64,17 @@ img { max-width: 100%; }
 
 /* Game grid */
 .section-title { font-size: 22px; margin: 32px 0 12px; }
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 14px; }
 .game-card {
-  display: flex; gap: 14px; align-items: center; padding: 16px;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  padding: 18px 12px 16px; text-align: center;
   background: var(--card); border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow);
   color: var(--text); text-decoration: none; transition: transform 0.12s ease;
 }
 .game-card:hover { transform: translateY(-2px); }
-.game-card h3 { margin: 0 0 2px; font-size: 18px; }
+/* the name fills the spare height (a two-line name), so icons and pills line up across a row */
+.game-card h3 { margin: 0; font-size: 17px; line-height: 1.25; flex: 1; display: flex; align-items: center; }
+.game-card .store-pills, .game-card .badge { margin-top: 0; }
 .icon { width: 64px; height: 64px; border-radius: 14px; flex: none; object-fit: cover; }
 .icon.big { width: 112px; height: 112px; border-radius: 24px; }
 .tile { display: grid; place-items: center; font-weight: 700; font-size: 34px; }
