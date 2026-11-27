@@ -29,7 +29,8 @@ header sets it.
 - **Look:** `assets/style.css` (light and dark, follows the device).
 - **A new game page:** copy `go/index.html` to `<id>/index.html`, change
   `data-game` and the `<title>`, add the game to `SITE.games`, and its icon to
-  `assets/icons/<id>.png` (or a `tile` character).
+  `assets/icons/<id>.jpg` (384×384, from the app's 1024 px icon:
+  `sips -s format jpeg -s formatOptions 82 -z 384 384 icon.png --out <id>.jpg`; or a `tile` character).
 - **Privacy policy changes:** edit `SITE.privacy` in all five languages and
   update `SITE.privacy.updated`.
 
