@@ -111,11 +111,13 @@
   }
 
   /**
-   * A game's App Store link: its own app if it has one, otherwise the hub app
-   * (Board Game Coach, iOS), which holds every game here unless it says "hub": false.
+   * A game's App Store link: the hub app (Board Game Coach, iOS), which holds every game
+   * here unless it says "hub": false. iOS is marketed through the hub only; a game's own
+   * `appStore` app stays on the store for its existing users and is linked only when the
+   * game is not in the hub.
    */
   function appStoreOf(game) {
-    return game.appStore || (game.hub === false ? null : S.hubAppStore);
+    return game.hub === false ? game.appStore || null : S.hubAppStore;
   }
 
   function gameCard(game) {
@@ -157,18 +159,14 @@
     document.title = tr(g.name) + ' — ' + ui('brand');
     var stores = '';
     var appStore = appStoreOf(g);
-    // a game with its own iOS app is in the hub too: offer both
-    var alsoInHub = !!g.appStore && g.hub !== false;
     if (appStore || g.playStore) {
       stores = '<div class="stores">' +
         (appStore ? '<a class="store-btn" href="' + appStore + '" rel="noopener">' + APPLE + esc(ui('appStore')) + '</a>' : '') +
-        (alsoInHub ? '<a class="store-btn" href="' + S.hubAppStore + '" rel="noopener">' + APPLE + esc(ui('hubApp')) + '</a>' : '') +
         (g.playStore ? '<a class="store-btn" href="' + g.playStore + '" rel="noopener">' + PLAY + esc(ui('googlePlay')) + '</a>' : '') +
         '</div>';
       if (!appStore) stores += '<p class="soon-note">' + esc(ui('appStoreSoon')) + '</p>';
       else if (!g.playStore) stores += '<p class="soon-note">' + esc(ui('playSoon')) + '</p>';
       if (appStore === S.hubAppStore) stores += '<p class="hub-note">' + esc(ui('hubNote').replace('{name}', tr(g.name))) + '</p>';
-      else if (alsoInHub) stores += '<p class="hub-note">' + esc(ui('hubAlsoNote').replace('{name}', tr(g.name))) + '</p>';
     } else {
       stores = '<p class="soon-note">' + esc(ui(g.status === 'planned' ? 'plannedLong' : 'comingSoonLong')) + '</p>';
     }

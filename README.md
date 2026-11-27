@@ -21,10 +21,14 @@ header sets it.
 ## Editing
 
 - **Texts and games:** `assets/content.js` (`window.SITE`). Every text has all
-  five languages. A game with `appStore` / `playStore` links shows the store
-  buttons, and the games list shows two pills, Apple and Android, green where the game is out and grey where it is not yet (only
-  `playStore`: also an App Store "coming soon" note); without them it is "Coming soon", or "Planned"
-  with `"status": "planned"`.
+  five languages.
+- **Store links:** on iOS every game links only to the hub app, Board Game Coach
+  (`hubAppStore`); we market the hub on iOS. A game's own `appStore` (Go, Four in
+  a Row, Reversi) stays on the store for its existing users but is not linked, unless
+  the game says `"hub": false`. `playStore` adds the Google Play button. The games list
+  shows two pills, Apple and Android: green where the game is out, grey where it is
+  not yet. A game on neither store shows "Coming soon", or "Planned" with
+  `"status": "planned"`.
 - **Rendering:** `assets/app.js` fills each page shell (`<body data-page="…">`).
 - **Look:** `assets/style.css` (light and dark, follows the device).
 - **A new game page:** copy `go/index.html` to `<id>/index.html`, change
