@@ -82,11 +82,11 @@ window.SITE = {
    "ko": "클래식 보드게임을 친절한 코치와 함께"
   },
   "heroText": {
-   "en": "Learn the rules, play an opponent at your level, and understand every move. No ads, no tracking.",
-   "zh-Hans": "学习规则，与水平相当的对手对局，看懂每一步。没有广告，没有追踪。",
-   "zh-Hant": "學習規則，與程度相當的對手對局，看懂每一步。沒有廣告，沒有追蹤。",
-   "ja": "ルールを覚え、自分のレベルに合った相手と対局し、一手一手を理解しましょう。広告もトラッキングもありません。",
-   "ko": "규칙을 배우고, 내 실력에 맞는 상대와 두며, 모든 수를 이해해 보세요. 광고도, 추적도 없습니다."
+   "en": "Learn the rules, play an opponent at your level, and understand every move.",
+   "zh-Hans": "学习规则，与水平相当的对手对局，看懂每一步。",
+   "zh-Hant": "學習規則，與程度相當的對手對局，看懂每一步。",
+   "ja": "ルールを覚え、自分のレベルに合った相手と対局し、一手一手を理解しましょう。",
+   "ko": "규칙을 배우고, 내 실력에 맞는 상대와 두며, 모든 수를 이해해 보세요."
   },
   "gamesTitle": {
    "en": "Our games",
