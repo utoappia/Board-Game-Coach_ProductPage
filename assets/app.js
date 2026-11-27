@@ -117,9 +117,6 @@
   function appStoreOf(game) {
     return game.appStore || (game.hub === false ? null : S.hubAppStore);
   }
-  var hubBtn = function () {
-    return '<a class="store-btn" href="' + S.hubAppStore + '" rel="noopener">' + APPLE + esc(ui('appStore')) + '</a>';
-  };
 
   function gameCard(game) {
     var appStore = appStoreOf(game);
@@ -146,8 +143,6 @@
     return '<main class="wrap">' +
       '<section class="hero"><img src="' + root + 'assets/owl.png" alt="">' +
       '<h1>' + esc(ui('heroTitle')) + '</h1><p>' + esc(ui('heroText')) + '</p></section>' +
-      '<section class="card hub"><img src="' + root + 'assets/icons/hub.png" alt="" width="72" height="72">' +
-      '<div><h2>' + esc(ui('hubTitle')) + '</h2><p>' + esc(ui('hubText')) + '</p><div class="stores">' + hubBtn() + '</div></div></section>' +
       '<h2 class="section-title">' + esc(ui('gamesTitle')) + '</h2>' +
       '<div class="grid">' + S.games.map(gameCard).join('') + '</div>' +
       '<section class="card"><h2>' + esc(ui('whyTitle')) + '</h2><ul class="bullets">' +
@@ -162,14 +157,18 @@
     document.title = tr(g.name) + ' — ' + ui('brand');
     var stores = '';
     var appStore = appStoreOf(g);
+    // a game with its own iOS app is in the hub too: offer both
+    var alsoInHub = !!g.appStore && g.hub !== false;
     if (appStore || g.playStore) {
       stores = '<div class="stores">' +
         (appStore ? '<a class="store-btn" href="' + appStore + '" rel="noopener">' + APPLE + esc(ui('appStore')) + '</a>' : '') +
+        (alsoInHub ? '<a class="store-btn" href="' + S.hubAppStore + '" rel="noopener">' + APPLE + esc(ui('hubApp')) + '</a>' : '') +
         (g.playStore ? '<a class="store-btn" href="' + g.playStore + '" rel="noopener">' + PLAY + esc(ui('googlePlay')) + '</a>' : '') +
         '</div>';
       if (!appStore) stores += '<p class="soon-note">' + esc(ui('appStoreSoon')) + '</p>';
       else if (!g.playStore) stores += '<p class="soon-note">' + esc(ui('playSoon')) + '</p>';
       if (appStore === S.hubAppStore) stores += '<p class="hub-note">' + esc(ui('hubNote').replace('{name}', tr(g.name))) + '</p>';
+      else if (alsoInHub) stores += '<p class="hub-note">' + esc(ui('hubAlsoNote').replace('{name}', tr(g.name))) + '</p>';
     } else {
       stores = '<p class="soon-note">' + esc(ui(g.status === 'planned' ? 'plannedLong' : 'comingSoonLong')) + '</p>';
     }
